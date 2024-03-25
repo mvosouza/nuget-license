@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<IsPackable>true</IsPackable>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+		<RepositoryType>git</RepositoryType>
+		<PackageId>NugetLincese.Toolkit</PackageId>
+		<Authors>Marcos Souza, Tom Chavakis, Lexy2, senslen</Authors>
+		<Company>-</Company>
+		<Title>.NET Library to print a list of the licenses of a projects</Title>
+		<PackageProjectUrl>https://github.com/mvosouza/nuget-license</PackageProjectUrl>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="HtmlAgilityPack" Version="1.11.45" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="NuGet.Versioning" Version="6.3.0" />
+		<PackageReference Include="System.IO.Compression" Version="4.3.0" />
+	</ItemGroup>
+	
+</Project>

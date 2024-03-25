@@ -3,6 +3,8 @@
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
 		<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<LangVersion>latest</LangVersion>
 		<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
@@ -13,20 +15,16 @@
 		<PackageId>dotnet-project-licenses</PackageId>
 		<ToolCommandName>dotnet-project-licenses</ToolCommandName>
 		<Version>2.7.1</Version>
-		<Authors>Tom Chavakis, Lexy2, senslen</Authors>
+		<Authors>Marcos Souza, Tom Chavakis, Lexy2, senslen</Authors>
 		<Company>-</Company>
-		<Title>.NET Core Tool to print a list of the licenses of a projects</Title>
-		<PackageProjectUrl>https://github.com/tomchavakis/nuget-license</PackageProjectUrl>
+		<Title>.NET Tool to print a list of the licenses of a projects</Title>
+		<PackageProjectUrl>https://github.com/mvosouza/nuget-license</PackageProjectUrl>
 		<GeneratePackageOnBuild Condition="'$(GeneratePackageOnBuild)' == ''">false</GeneratePackageOnBuild>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
-	
+
 	<ItemGroup>
 		<PackageReference Include="CommandLineParser" Version="2.9.1" />
-		<PackageReference Include="HtmlAgilityPack" Version="1.11.45" />
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-		<PackageReference Include="NuGet.Versioning" Version="6.3.0" />
-		<PackageReference Include="System.IO.Compression" Version="4.3.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -34,6 +32,10 @@
 		<AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
 			<_Parameter1>$(MSBuildProjectName).Tests</_Parameter1>
 		</AssemblyAttribute>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\NugetLicense.Toolkit\NugetLicense.Toolkit.csproj" />
 	</ItemGroup>
 
 </Project>

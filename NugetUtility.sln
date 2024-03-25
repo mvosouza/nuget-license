@@ -1,19 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NugetUtility", "src\NugetUtility.csproj", "{03100542-3DCF-4DFF-8357-9862CCB7EDC4}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NugetUtility.Tests", "tests\NugetUtility.Tests\NugetUtility.Tests.csproj", "{469490F0-DD86-4FAD-ADBD-D8D151F9EADA}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_SolutionItems", "_SolutionItems", "{5BF8EC73-735D-4349-97E6-CA1B8C4B758B}"
 	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		.travis.yml = .travis.yml
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NugetLicense.Toolkit", "src\NugetLicense.Toolkit\NugetLicense.Toolkit.csproj", "{83453695-80C5-4A7C-9082-C12F53F1742F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NugetLicense.Tests", "src\NugetLicense.Tests\NugetLicense.Tests.csproj", "{E4AEA37C-B717-4E56-A50F-36CFB918C9A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NugetLicense", "src\NugetLicense\NugetLicense.csproj", "{F96A0C5E-C962-4393-B9CB-0217795E7DD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,14 +24,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{03100542-3DCF-4DFF-8357-9862CCB7EDC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{03100542-3DCF-4DFF-8357-9862CCB7EDC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{03100542-3DCF-4DFF-8357-9862CCB7EDC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{03100542-3DCF-4DFF-8357-9862CCB7EDC4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{469490F0-DD86-4FAD-ADBD-D8D151F9EADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{469490F0-DD86-4FAD-ADBD-D8D151F9EADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{469490F0-DD86-4FAD-ADBD-D8D151F9EADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{469490F0-DD86-4FAD-ADBD-D8D151F9EADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83453695-80C5-4A7C-9082-C12F53F1742F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83453695-80C5-4A7C-9082-C12F53F1742F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83453695-80C5-4A7C-9082-C12F53F1742F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83453695-80C5-4A7C-9082-C12F53F1742F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4AEA37C-B717-4E56-A50F-36CFB918C9A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4AEA37C-B717-4E56-A50F-36CFB918C9A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4AEA37C-B717-4E56-A50F-36CFB918C9A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4AEA37C-B717-4E56-A50F-36CFB918C9A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F96A0C5E-C962-4393-B9CB-0217795E7DD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F96A0C5E-C962-4393-B9CB-0217795E7DD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F96A0C5E-C962-4393-B9CB-0217795E7DD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F96A0C5E-C962-4393-B9CB-0217795E7DD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
