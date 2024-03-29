@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using NugetLicense.Toolkit.Model;
 
 namespace NugetLicense.Toolkit
 {

@@ -1,12 +1,7 @@
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.IO;
-using System.Net.Http;
-using System.Threading;
-using System.Threading.Tasks;
 using Moq;
 using Moq.Protected;
-using NUnit.Framework;
+using NugetLicense.Toolkit.Model;
 
 namespace NugetLicense.Toolkit.Tests
 
@@ -32,7 +27,7 @@ namespace NugetLicense.Toolkit.Tests
 
             var mockMessageHandler = new Mock<HttpMessageHandler>();
 
-            mockMessageHandler.Protected().Setup<Task<HttpResponseMessage>>("SendAsync",ItExpr.IsAny<HttpRequestMessage>(), ItExpr.IsAny<CancellationToken>()).ThrowsAsync(new TaskCanceledException("Timeout Exception"));
+            mockMessageHandler.Protected().Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(), ItExpr.IsAny<CancellationToken>()).ThrowsAsync(new TaskCanceledException("Timeout Exception"));
 
 
 
@@ -47,7 +42,7 @@ namespace NugetLicense.Toolkit.Tests
 
                 ExportLicenseTexts = true,
 
-            },new HttpClient(mockMessageHandler.Object));
+            }, new HttpClient(mockMessageHandler.Object));
 
 
 

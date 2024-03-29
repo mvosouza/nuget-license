@@ -2,14 +2,12 @@ using System.Collections.ObjectModel;
 using System.Text.RegularExpressions;
 using CommandLine;
 using CommandLine.Text;
-using NugetLicense.Toolkit;
 using static NugetLicense.Toolkit.Utilities;
 using NugetLicense.Toolkit.Model;
 
-
-namespace NugetLicense
+namespace NugetLicense.Toolkit
 {
-    public class CommandPackageOptions : IPackageOptions
+    public class PackageOptions : IPackageOptions
     {
         private readonly Regex UserRegexRegex = new Regex("^([/#])(.+)\\1$");
 
@@ -22,7 +20,7 @@ namespace NugetLicense
 
         [Option("allowed-license-types", Default = null, HelpText = "Simple json file of a text array of allowable licenses, if no file is given, all are assumed allowed. Cannot be used alongside 'forbidden-license-types'.")]
         public string AllowedLicenseTypesOption { get; set; }
-        
+
         [Option("forbidden-license-types", Default = null, HelpText = "Simple json file of a text array of forbidden licenses, if no file is given, none are assumed forbidden. Cannot be used alongside 'allowed-license-types'.")]
         public string ForbiddenLicenseTypesOption { get; set; }
 
@@ -101,15 +99,15 @@ namespace NugetLicense
             get
             {
                 return new List<Example>() {
-                    new Example ("Simple", new CommandPackageOptions { ProjectDirectory = "~/Projects/test-project" }),
-                    new Example ("VS Solution", new CommandPackageOptions { ProjectDirectory = "~/Projects/test-project/project.sln" }),
-                    new Example ("Unique VS Solution to Custom JSON File", new CommandPackageOptions {
+                    new Example ("Simple", new PackageOptions { ProjectDirectory = "~/Projects/test-project" }),
+                    new Example ("VS Solution", new PackageOptions { ProjectDirectory = "~/Projects/test-project/project.sln" }),
+                    new Example ("Unique VS Solution to Custom JSON File", new PackageOptions {
                         ProjectDirectory = "~/Projects/test-project/project.sln",
                         UniqueOnly = true,
                         JsonOutput = true,
                         OutputFileName = @"~/Projects/another-folder/licenses.json"
                     }),
-                    new Example("Export all license texts in a specific directory with verbose log", new CommandPackageOptions
+                    new Example("Export all license texts in a specific directory with verbose log", new PackageOptions
                     {
                         LogLevelThreshold = LogLevel.Verbose,
                         OutputDirectory = "~/Projects/exports",

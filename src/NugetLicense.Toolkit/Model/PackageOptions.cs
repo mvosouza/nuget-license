@@ -2,7 +2,7 @@ using System.Collections.ObjectModel;
 using System.Text.RegularExpressions;
 using static NugetLicense.Toolkit.Utilities;
 
-namespace NugetLicense.Toolkit
+namespace NugetLicense.Toolkit.Model
 {
     public class PackageOptions : IPackageOptions
     {

@@ -6,7 +6,7 @@
 using System.Xml.Serialization;
 using System.Xml;
 
-namespace NugetLicense.Toolkit
+namespace NugetLicense.Toolkit.Model
 {
     [XmlRoot(ElementName="license")]
 	public class License {

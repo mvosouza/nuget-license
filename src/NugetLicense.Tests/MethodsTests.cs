@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using CommandLine.Text;
 using FluentAssertions;
+using NugetLicense.Toolkit.Model;
 using FluentAssertions.Execution;
 
 namespace NugetLicense.Toolkit.Tests

@@ -1,8 +1,6 @@
 ﻿using FluentAssertions;
-using NUnit.Framework;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using NugetLicense.Toolkit.Model;
 
 namespace NugetLicense.Toolkit.Tests
 {

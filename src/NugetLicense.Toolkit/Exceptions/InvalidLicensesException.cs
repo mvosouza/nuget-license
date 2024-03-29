@@ -1,4 +1,6 @@
-﻿namespace NugetLicense.Toolkit
+﻿using NugetLicense.Toolkit.Model;
+
+namespace NugetLicense.Toolkit
 {
     public class InvalidLicensesException<T> : Exception
     {

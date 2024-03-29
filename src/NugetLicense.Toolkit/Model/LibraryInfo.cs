@@ -1,4 +1,4 @@
-namespace NugetLicense.Toolkit
+namespace NugetLicense.Toolkit.Model
 {
     public class LibraryInfo
     {

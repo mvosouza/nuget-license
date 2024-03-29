@@ -1,6 +1,8 @@
 ﻿using CommandLine;
 using NugetLicense.Toolkit.Exceptions;
 using System.Reflection;
+using NugetLicense.Toolkit.Model;
+using NugetLicense.Toolkit.Extensions;
 
 namespace NugetLicense.Toolkit
 {
@@ -83,27 +85,16 @@ namespace NugetLicense.Toolkit
             }
             catch (PackageOptionsValidationException ex) 
             {
-                foreach (var propertyValidation in ex.Errors) 
+                var messages = ex.GetErrorMessages();
+                foreach (var message in messages)
                 {
-                    var message = propertyValidation.Message;
-
-                    // TODO: Replace the property name to option name
-                    PropertyInfo? prop = typeof(CommandPackageOptions).GetProperty(propertyValidation.Property);
-                    if (prop != null) { 
-                        OptionAttribute? optionAttribute = (OptionAttribute?)Attribute.GetCustomAttribute(prop, typeof(OptionAttribute));
-                        if (optionAttribute != null) 
-                        {
-                            var name = optionAttribute.LongName ?? optionAttribute.ShortName;
-                            message.Replace(propertyValidation.Property, name);
-                        }
-                    }
                     Console.Error.WriteLine(message);
                 }
                 return 1;
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                Console.Error.WriteLine(e);
                 return -1;
             }
         }

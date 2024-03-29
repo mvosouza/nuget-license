@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using NuGet.Versioning;
 using NugetLicense.Toolkit.Extensions;
 using static NugetLicense.Toolkit.Utilities;
+using NugetLicense.Toolkit.Model;
 
 namespace NugetLicense.Toolkit
 {

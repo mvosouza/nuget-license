@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace NugetLicense.Toolkit
+namespace NugetLicense.Toolkit.Model
 {
     public interface IPackageOptions
     {
